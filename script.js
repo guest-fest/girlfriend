@@ -69,11 +69,11 @@ function loadQuestion() {
 
   const questionData = questions[currentQuestionIndex];
   quizContainer.innerHTML = `
-      <h2 class="text-xl font-bold mb-4 bg-red-400 rounded-full p-8 text-white py-8">${questionData.question}</h2>
+      <h2 class="text-xl font-bold mb-4 bg-red-300 rounded-full p-8 text-white py-8">${questionData.question}</h2>
       <ul>
           ${questionData.choices.map(choice => `
               <li>
-                  <button class="bg-pink-200 text-white px-4 py-2 rounded-lg mb-2 w-full hover:bg-red-700" onclick="handleAnswer('${choice}')">${choice}</button>
+                  <button class="bg-pink-200 text-white px-4 py-2 rounded-lg mb-2 w-full hover:bg-red-400" onclick="handleAnswer('${choice}')">${choice}</button>
               </li>
           `).join('')}
       </ul>
